@@ -12,7 +12,7 @@ export default function MainHeader() {
     <nav className={styles.navigation} >
     <ul>
         <li>
-            <Link href="/events">All Events</Link>
+            <Link href="/events">Featured Events</Link>
         </li>
     </ul>
     </nav>
