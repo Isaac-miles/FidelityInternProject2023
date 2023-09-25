@@ -27,7 +27,7 @@ const DUMMY_EVENTS = [
       location: 'My Street 12, 10115 Broke City',
       date: '2022-04-10',
       image: 'images/coding.jpg',
-      isFeatured: true,
+      isFeatured: false,
     },
     {
       id: 'e4',
@@ -57,10 +57,16 @@ const DUMMY_EVENTS = [
       location: 'My Street 12, 10115 Broke City',
       date: '2022-04-10',
       image: 'images/meeting.jpg',
-      isFeatured: true,
+      isFeatured: false,
     },
   ];
  
   export function getAllEvent(){
     return DUMMY_EVENTS
   }
+  export function getFeaturedEvent(){
+    return DUMMY_EVENTS.filter((event)=>event.isFeatured)
+  }
+export function getEventById(primaryKey){
+  return DUMMY_EVENTS.find((event)=>event.id=== primaryKey)
+}

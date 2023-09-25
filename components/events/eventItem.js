@@ -7,6 +7,13 @@ import ArrowIcon from '../icons/address-icon'
 export default function eventItem(props) {
   const {title,image, location, id, date} = props
 
+  const readableDate = new Date(date).toLocaleDateString('en-US',{
+    day: 'numeric',
+    month:'long',
+    year:'numeric'
+  })
+  const detailPageLink = `/events/${id}`
+
   return (
     <li className={styles.item}>
       <img src={'/' + image} alt={title} />
@@ -17,7 +24,7 @@ export default function eventItem(props) {
 
           <div className={styles.date}>
             <DateIcon/>
-            <time>{date}</time>
+            <time>{readableDate}</time>
           </div>
 
           <div className={styles.address}>
@@ -28,7 +35,7 @@ export default function eventItem(props) {
         </div>
 
         <div className={styles.actions}>
-         <Button onClick=''>
+         <Button link={detailPageLink}>
           <span>Explore Event</span>
           <span className={styles.icon}><ArrowIcon/></span>
          </Button>
