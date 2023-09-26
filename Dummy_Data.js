@@ -67,6 +67,6 @@ const DUMMY_EVENTS = [
   export function getFeaturedEvent(){
     return DUMMY_EVENTS.filter((event)=>event.isFeatured)
   }
-export function getEventById(primaryKey){
+export function  getEventById(primaryKey){
   return DUMMY_EVENTS.find((event)=>event.id=== primaryKey)
 }
