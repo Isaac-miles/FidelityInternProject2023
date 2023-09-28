@@ -7,12 +7,13 @@ export default function eventList(props) {
     <div>
       <ul  className={styles.list}>
         {props.items.map((event)=>(
-          <EventItem title={event.title}
+          <EventItem name={event.name}
           key={event.id}
             id={event.id}
             image={event.image}
-            location={event.location}
-            date={event.date}
+            accType={event.accType}
+            availableBal={event.availableBal}
+            accStatus={event.accStatus}
           /> 
         ))}
       </ul>

@@ -22,38 +22,67 @@
   }
   
   .content h2 {
+    font-size: medium;
     margin: 0.5rem 0;
   }
   
-  .date,
-  .address {
+  .accType {
     display: flex;
     gap: 0.5rem;
     align-items: center;
   }
   
-  .date svg,
-  .address svg {
+  .accType svg {
     width: 1.25rem;
     height: 1.25rem;
     color: #666666;
   }
-  
-  .content time {
-    color: #666666;
+
+  .availableBal {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: 27px;
     font-weight: bold;
   }
   
-  .content address {
-    margin: 0.5rem 0;
+  .availableBal svg {
+    width: 1.25rem;
+    height: 1.25rem;
     color: #666666;
+  }
+
+  .accStatus {
+    display: block;
+    gap: 0.5rem;
+    color: #666666;
+  }
+  
+  .accStatus h6 {
+    color: #0E237E;
+    margin: 0.1rem 0 0 17.2rem;
+  }
+
+  .accStatus span {
+    font-size: small;
+    padding-left: 16.5rem;
+  }
+
+  .content span {
+    margin: 0.2rem 0;
     white-space: pre;
   }
   
   .actions {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 1rem 20px;
+  }
+
+  .actions svg {
+    margin-top: -3px;
+    margin-left: 2px;
+    padding-top: 6px;
   }
   
   .actions a {
@@ -83,7 +112,7 @@
   
     .item img {
       width: 40%;
-      height: 14rem;
+      height: 15rem;
     }
   
     .content {

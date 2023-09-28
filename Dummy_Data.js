@@ -1,66 +1,67 @@
 const DUMMY_EVENTS = [
     {
       id: 'e1',
-      title: 'Programming for everyone',
-      description:
-        'Everyone can learn to code! Yes, everyone! In this live event, we are going to go through all the key basics and get you started with programming as well.',
-      location: 'Somestreet 25, 12345 San Somewhereo',
-      date: '2021-05-12',
-      image: 'images/coding-event.jpg',
-      isFeatured: false,
+      name: 'GBEMINIYI AJAKAIYE',
+      accStatus: 'ACTIVE', 
+      accType: 'Savings Account',
+      availableBal: '$905,320.70',
+      image: 'images/man-3.jpg',
+      isEnrolled: false,
     },
     {
       id: 'e2',
-      title: 'Networking for introverts',
-      description:
-        "We know: Networking is no fun if you are an introvert person. That's why we came up with this event - it'll be so much easier. Promised!",
-      location: 'New Wall Street 5, 98765 New Work',
-      date: '2021-05-30',
-      image: 'images/code.jpg',
-      isFeatured: true,
+      name: 'ADAUGO NWUZOR',
+      accStatus: 'ACTIVE',    
+      accType: 'Savings Account',
+      availableBal: 'N700,175.20',
+      image: 'images/woman-1.jpg',
+      isEnrolled: true,
     },
     {
       id: 'e3',
-      title: 'Networking for extroverts',
-      description:
-        'You probably need no help with networking in general. But focusing your energy correctly - that is something where most people can improve.',
-      location: 'My Street 12, 10115 Broke City',
-      date: '2022-04-10',
-      image: 'images/coding.jpg',
-      isFeatured: true,
+      name: 'JOHNSON EMMANUEL',
+      accStatus: 'ACTIVE', 
+      accType: 'Current Account',
+      availableBal: 'N1,085,060.38',
+      image: 'images/man-4.jpg',
+      isEnrolled: false,
     },
     {
       id: 'e4',
-      title: 'Artificial',
-      description:
-        'You probably need no help with networking in general. But focusing your energy correctly - that is something where most people can improve.',
-      location: 'My Street 12, 10115 Broke City',
-      date: '2022-04-10',
-      image: 'images/ai.jpg',
-      isFeatured: true,
+      name: 'SEKINAT BELLO',
+      accStatus: 'ACTIVE', 
+      accType: 'Current Account',
+      availableBal: '$1,501,075.40',
+      image: 'images/woman-3.jpg',
+      isEnrolled: true,
     },
     {
       id: 'e5',
-      title: 'Scrum',
-      description:
-        'You probably need no help with networking in general. But focusing your energy correctly - that is something where most people can improve.',
-      location: 'My Street 12, 10115 Broke City',
-      date: '2022-04-10',
-      image: 'images/code1.jpg',
-      isFeatured: true,
+      name: 'KUBURA OLUTOLA',
+      accStatus: 'ACTIVE', 
+      accType: 'Savings Account',
+      availableBal: 'N566,005.20',
+      image: 'images/man-2.jpg',
+      isEnrolled: true,
     },
     {
       id: 'e6',
-      title: 'Meetings',
-      description:
-        'You probably need no help with networking in general. But focusing your energy correctly - that is something where most people can improve.',
-      location: 'My Street 12, 10115 Broke City',
-      date: '2022-04-10',
-      image: 'images/meeting.jpg',
-      isFeatured: true,
+      name: 'JOLAYEMI ADENIYAN',
+      accStatus: 'ACTIVE', 
+      accType: 'Savings Account',
+      availableBal: '$1,050,045.10',
+      image: 'images/woman-2.jpg',
+      isEnrolled: true,
     },
-  ];
- 
-  export function getAllEvent(){
-    return DUMMY_EVENTS
-  }
+];
+
+export function getAllEvent(){
+  return DUMMY_EVENTS
+}
+export function getEnrolledEvent() {
+  return DUMMY_EVENTS.filter((profile)=>profile.isEnrolled);
+}
+
+export function getEventById(primaryKey) {
+  return DUMMY_EVENTS.find((profile) => profile.id === primaryKey);
+}

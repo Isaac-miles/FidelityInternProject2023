@@ -1,35 +1,43 @@
 import React from 'react'
-import DateIcon from '../icons/date-icon'
-import AddressIcon from '../icons/address-icon'
+import AccBal from '../icons/accbal-icon'
+import CardIcon from '../icons/card-icon'
 import styles from './eventItem.module.css'
 import Button from '../util/button'
-import ArrowIcon from '../icons/address-icon'
+import ArrowIcon from '../icons/arrow-right-icon'
+
 export default function eventItem(props) {
-  const {title,image, location, id, date} = props
+  const {name, image, accType, id, availableBal, accStatus} = props
+
+  const profilePageLink = `/events/${id}`;
 
   return (
     <li className={styles.item}>
-      <img src={'/' + image} alt={title} />
+      <img src={'/' + image} alt={name} />
 
       <div className={styles.content}>
         <div className={styles.summary}>
-          <h2>{title}</h2>
+          <h2>{name}</h2>
 
-          <div className={styles.date}>
-            <DateIcon/>
-            <time>{date}</time>
+          <div className={styles.availableBal}>
+            <AccBal/>
+            <span>{availableBal}</span>
           </div>
 
-          <div className={styles.address}>
-            <AddressIcon/>
-            <address>{location}</address>
+          <div className={styles.accType}>
+            <CardIcon/>
+            <span>{accType}</span>
+          </div>
+
+          <div className={styles.accStatus}>
+            <h6>Status</h6>
+            <span>{accStatus}</span>
           </div>
 
         </div>
 
         <div className={styles.actions}>
-         <Button onClick=''>
-          <span>Explore Event</span>
+         <Button onClick={profilePageLink}>
+          <span>View Profile</span>
           <span className={styles.icon}><ArrowIcon/></span>
          </Button>
         </div>
